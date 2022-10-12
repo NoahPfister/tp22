@@ -1,4 +1,3 @@
-
 #créé par Noah Pfister
 
 
@@ -17,7 +16,7 @@ tries = 0
 
 while not guessed:
     write = input("devin un nombre entre 1 et 1000")
-    write = int("vous avez eu ",write)
+    write = int(write)
     if answer == write:
         print(tries)
         reesayer = input("vous avez raison!!, voulez vous reesayer? o/n")
@@ -26,8 +25,8 @@ while not guessed:
             guessed = False
         if reesayer == "n":
            print("Merci et au revoir")
-        guessed = True
-
+           guessed = True
+   
     if answer < write:
         print("votre reponse est plus grande que la reponse?")
         tries = tries + 1
@@ -35,7 +34,3 @@ while not guessed:
     if answer > write:
         print("votre reponse est plus petite que la reponse?")
         tries = tries + 1
-
-
-
-
