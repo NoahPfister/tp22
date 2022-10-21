@@ -1,23 +1,21 @@
-#créé par Noah Pfister
+# créé par Noah Pfister
 
 
 import random
 
-#ici je definit le maximum
+# ici je definit le maximum
 minimum = 1
-maximum = 1000
+maximum = 4
 
-
-
-#Ceci choisi quel nombre serai le maximum
-answer = random.randint(minimum, maximum)
+# Ceci choisi quel nombre serai le maximum
 guessed = False
 
-#ceci est la fonction qui tient compte du nombre d'essai
+# ceci est la fonction qui tient compte du nombre d'essai
 tries = 0
 
-#on demande pour le nombre requis, et si tu reussi, ca recommence.
-while not guessed:
+# on demande pour le nombre requis, et si tu reussi, ca recommence.
+while not guessed: #ceci est un lloooop
+    answer = random.randint(minimum, maximum)
     write = input("devin un nombre entre 1 et 1000")
     write = int(write)
     if answer == write:
@@ -27,9 +25,10 @@ while not guessed:
         if reesayer == "o":
             guessed = False
         if reesayer == "n":
-           print("Merci et au revoir")
-           guessed = True
-#si tu ne reussis pas, ceci
+            print("Merci et au revoir")
+            guessed = True
+    # si tu ne reussis pas, ceci
+
     if answer < write:
         print("votre reponse est plus grande que la reponse?")
         tries = tries + 1
@@ -38,4 +37,3 @@ while not guessed:
         print("votre reponse est plus petite que la reponse?")
         tries = tries + 1
 
-        
