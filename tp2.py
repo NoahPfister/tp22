@@ -5,7 +5,7 @@ import random
 
 # ici je definit le maximum
 minimum = 1
-maximum = 4
+maximum = 1000
 
 # Ceci choisi quel nombre serai le maximum
 guessed = False
